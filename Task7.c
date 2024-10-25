@@ -9,7 +9,7 @@ int main()
     int i = 0;
     int answer = 0;
     int temp = 0;
-    char opperator = '+';
+    char operator = '+';
 
     while (input_arr[i] != '\0')
     {
@@ -19,28 +19,28 @@ int main()
         }
         else if (input_arr[i] == '+')
         {
-            if (opperator == '+')
+            if (operator == '+')
             {
                 answer += temp;
             }
-            else if (opperator == '-')
+            else if (operator == '-')
             {
                 answer -= temp;
             }
-            opperator = '+';
+            operator = '+';
             temp = 0;
         }
         else if (input_arr[i] == '-')
         {
-            if (opperator == '+')
+            if (operator == '+')
             {
                 answer += temp;
             }
-            else if (opperator == '-')
+            else if (operator == '-')
             {
                 answer -= temp;
             }
-            opperator = '-';
+            operator = '-';
             temp = 0;
         }
         else
@@ -52,11 +52,11 @@ int main()
         i++;
     }
 
-    if (opperator == '+')
+    if (operator == '+')
     {
         answer += temp;
     }
-    else if (opperator == '-')
+    else if (operator == '-')
     {
         answer -= temp;
     }
